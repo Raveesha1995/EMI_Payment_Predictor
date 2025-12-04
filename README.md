@@ -5,7 +5,7 @@ An intelligent system combining **Machine Learning (XGBoost)** and **Large Langu
 ## 🚀 Key Features
 
 - **ML Prediction Engine**: XGBoost model analyzing payment patterns, delays, and trends
-- **LLM-Powered Explanations**: OpenAI GPT-3.5-turbo for intelligent, human-readable prediction explanations
+- **LLM-Powered Explanations**: OpenAI GPT-4 Turbo for intelligent, concise prediction explanations
 - **AI Business Insights**: LLM-generated risk assessments and actionable recommendations
 - **Smart Date Calculations**: Last Demand Date, Next Demand Date, Predicted Date
 - **Modern Web Interface**: User-friendly UI with AI-powered explanations
@@ -94,7 +94,7 @@ EMI_Payment_Predictor/
 ## 💡 Tech Stack
 
 - **Backend**: Python, Flask, XGBoost, scikit-learn
-- **LLM**: OpenAI GPT-3.5-turbo
+- **LLM**: OpenAI GPT-4 Turbo
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Data Processing**: Pandas, NumPy
 
