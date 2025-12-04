@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Payment Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 EMI Payment Predictor</h1>
+            <p class="subtitle">AI-Powered Payment Date Prediction System</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('single')">Single Prediction</button>
+            <button class="tab-btn" onclick="showTab('batch')">Batch Prediction</button>
+            <button class="tab-btn" onclick="showTab('customers')">View Customers</button>
+        </div>
+
+        <!-- Single Prediction Tab -->
+        <div id="single-tab" class="tab-content active">
+            <div class="card">
+                <h2>Predict Payment Date</h2>
+                <div class="form-group">
+                    <label for="customer-id">Customer ID:</label>
+                    <input type="text" id="customer-id" placeholder="e.g., CUST_0001">
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="use-llm" checked> AI-Powered Explanation (LLM)
+                    </label>
+                </div>
+                <button class="btn btn-primary" onclick="predictSingle()">Predict Payment Date</button>
+                
+                <div id="single-result" class="result-container"></div>
+            </div>
+        </div>
+
+        <!-- Batch Prediction Tab -->
+        <div id="batch-tab" class="tab-content">
+            <div class="card">
+                <h2>Batch Prediction</h2>
+                <p>Predict payment dates for all customers or specific customers</p>
+                <div class="form-group">
+                    <label for="customer-ids">Customer IDs (comma-separated, leave empty for all):</label>
+                    <textarea id="customer-ids" rows="3" placeholder="CUST_0001, CUST_0002, CUST_0003"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="use-llm-batch" checked> AI-Powered Insights (LLM)
+                    </label>
+                </div>
+                <button class="btn btn-primary" onclick="predictBatch()">Predict All</button>
+                
+                <div id="batch-result" class="result-container"></div>
+            </div>
+        </div>
+
+        <!-- Customers Tab -->
+        <div id="customers-tab" class="tab-content">
+            <div class="card">
+                <h2>Customer List</h2>
+                <button class="btn btn-secondary" onclick="loadCustomers()">Refresh List</button>
+                <div id="customers-list" class="result-container"></div>
+            </div>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Processing...</p>
+        </div>
+    </div>
+
+    <script src="app.js?v=4.0"></script>
+</body>
+</html>
+
