@@ -39,3 +39,7 @@ emi_predictions_*.csv
 # Temporary files
 *.tmp
 *.temp
+
+# Markdown files (except README.md)
+*.md
+!README.md
