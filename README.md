@@ -21,7 +21,7 @@ An intelligent system combining **Machine Learning (XGBoost)** and **Large Langu
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/EMI_Payment_Predictor.git
+   git clone https://github.com/Raveesha1995/EMI_Payment_Predictor.git
    cd EMI_Payment_Predictor
    ```
 
